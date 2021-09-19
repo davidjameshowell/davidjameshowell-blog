@@ -3,12 +3,12 @@
         "aws_region": "us-east-1",
         "domain": "davidjameshowell.com",
         "app_function": "app.app",
-        "project_name": "djh-blog-zappa-production"
+        "project_name": "djh-blog-zappa"
     },
     "development": {
         "aws_region": "us-east-1",
         "domain": "blog-dev.davidjameshowell.com",
         "app_function": "app.app",
-        "project_name": "djh-blog-zappa-development"
+        "project_name": "djh-blog-zappa"
     }
 }
