@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block page_head %}
+<!-- Page Header -->
+    <header class="masthead" style="background-image: url('https://blog-assets.djh-projects.com/img/blog_header.jpg')">
+      <!-- Photo by Kevin Ku from Pexels https://www.pexels.com/photo/coding-computer-data-depth-of-field-577585/ -->
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-md-10 mx-auto">
+            <div class="site-heading">
+              <h1>About Me</h1>
+              <span class="subheading">The man behind the ramblings.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+{% endblock %}
+{% block content %}
+<div class="container">
+  <div class="row">
+    <div class="col-lg-8 col-md-10 mx-auto">
+      {% autoescape false %}
+              {{ about.content | markdown }}
+      {% endautoescape %}
+    </div>
+  </div>
+</div>
+{% endblock %}

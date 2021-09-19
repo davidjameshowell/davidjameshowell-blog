@@ -1,0 +1,8 @@
+rotate.sh
+zappa_settings.json
+Dockerfile
+README.md
+.git
+zappa_requirements.txt
+deploy_blog_posts.py
+posts/*

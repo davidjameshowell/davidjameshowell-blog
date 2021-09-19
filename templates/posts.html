@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+{% block content %}
+<header class="masthead" style="background-image: url('https://blog-assets.djh-projects.com/img/blog_header.jpg')">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-md-10 mx-auto">
+            <div class="post-heading">
+              <h1>{{ post.title }}</h1>
+              <h2 class="subheading">{{ post.subtitle}}</h2>
+              <span class="meta">Posted by
+                <a href="#">David Howell - </a>{{ post.created_on | epoch_to_date}} - <a href="{{ url_for('get_post', slug=post.slug) }}#commento">Jump to comments</a></span>
+            </div>
+          </div>
+        </div>
+      </div>
+</header>
+<article>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-md-10 mx-auto">
+            {% autoescape false %}
+              {{ post.content | markdown }}
+            {% endautoescape %}
+          </div>
+        </div>
+      </div>
+</article>
+<comments>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-md-10 mx-auto">
+                <h2>
+                    Comments or Questions?
+                </h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-8 col-md-10 mx-auto">
+                <script defer src="https://comments.djh-projects.com/js/commento.js"></script>
+                <noscript>Please enable JavaScript to load the comments.</noscript>
+                <div id="commento"></div>
+            </div>
+        </div>
+    </div>
+</comments>
+{% endblock %}

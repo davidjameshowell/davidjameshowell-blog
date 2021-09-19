@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+{% block page_head %}
+<!-- Page Header -->
+    <header class="masthead" style="background-image: url('https://blog-assets.djh-projects.com/img/blog_header.jpg')">
+    <script src="https://comments.djh-projects.com/js/count.js"></script>
+      <!-- Photo by Kevin Ku from Pexels https://www.pexels.com/photo/coding-computer-data-depth-of-field-577585/ -->
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-md-10 mx-auto">
+            <div class="site-heading">
+              <h1>DJH Projects</h1>
+              <span class="subheading">A personal blog of David Howell's featureing eclectic and esoteric tech findings.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+{% endblock %}
+{% block content %}
+<div class="container">
+  <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+           {% for post in posts.items %}
+          <div class="post-preview">
+            <a href="{{ url_for('get_post', slug=post.slug) }}">
+              <h2 class="post-title">
+                {{ post.title }}
+              </h2>
+              <h3 class="post-subtitle">
+                {{ post.subtitle }}
+              </h3>
+            </a>
+            <p class="post-meta">Posted by
+              <a href="{{ url_for('about_me') }}">David Howell</a>
+                on {{ post.created_on | epoch_to_date}} - <a href="{{ url_for('get_post', slug=post.slug) }}#commento"></a></p>
+          </div>
+          <hr> 
+          {% endfor %}
+      <!-- Pager -->
+      <div class="clearfix">
+        {% if posts.has_prev %}
+        <a class="btn btn-primary float-left" href="{{ url_for('list_posts', page=posts.prev_num) }}">&larr; Newer Posts</a>
+        {% endif %}
+        {% if posts.has_next %}
+        <a class="btn btn-primary float-right" href="{{ url_for('list_posts', page=posts.next_num) }}">Older Posts &rarr;</a>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
