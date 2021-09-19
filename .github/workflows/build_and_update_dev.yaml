@@ -53,6 +53,10 @@ jobs:
       uses: mxschmitt/action-tmate@v3
       if: ${{ github.event_name == 'workflow_dispatch' && github.event.inputs.debug_enabled }}
 
+    - name: Refresh blog posts
+      run: |
+        bash ./scripts/refresh_blog_posts.sh
+
     - name: Build Docker image
       run: |
         bash ./scripts/build.sh
