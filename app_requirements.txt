@@ -3,4 +3,4 @@ git+https://github.com/phil-airship/Zappa.git@cc6ad1beefb0fa96625a6cbb01146d0b3a
 flask==2.0.1
 environs==9.3.3
 Flask-SQLAlchemy==2.5.1
-mistune==0.8.4
+mistune==2.0.0a4
