@@ -64,14 +64,22 @@ jobs:
         STAGE: development
         TAG: ${{ github.sha }}
 
-    # Forked package includes fix
-    #- name: Patch Zappa core due to PR #999
-    #  run: |
-    #    sed -i 's;self.cf_template.add_description("Automatically generated with Zappa");self.cf_template.set_description("Automatically generated with Zappa");g' '/opt/hostedtoolcache/pyenv_root/2.0.0/x64/versions/3.7.3/lib/python3.7/site-packages/zappa/core.py'
-
     - name: Update Zappa stage
       run: |
         bash ./scripts/update.sh
       env:
         STAGE: development
         TAG: ${{ github.sha }}
+
+    - uses: EndBug/add-and-commit@v7 # You can change this to use a specific version.
+      name: Add updated blog DB
+      with:
+        add: './blog_db/blog.db'
+        author_name: David Howell
+        author_email: david@davidjameshowell.com
+        cwd: ${{GITHUB_WORKSPACE}}
+        default_author: github_actor
+        message: 'Update Blog DB on successful dev build - prep for prod'
+        pathspec_error_handling: exitImmediately
+        pull: 'NO-PULL'
+        push: true
