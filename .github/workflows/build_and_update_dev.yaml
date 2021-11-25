@@ -77,7 +77,6 @@ jobs:
         add: './blog_db/blog.db'
         author_name: David Howell
         author_email: david@davidjameshowell.com
-        cwd: ${{GITHUB_WORKSPACE}}
         default_author: github_actor
         message: 'Update Blog DB on successful dev build - prep for prod'
         pathspec_error_handling: exitImmediately
