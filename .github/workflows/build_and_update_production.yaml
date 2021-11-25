@@ -57,10 +57,6 @@ jobs:
         STAGE: production
         TAG: ${{ steps.get_version.outputs.version }}
 
-    - name: Patch Zappa core due to PR #999
-      run: |
-        sed -i 's;self.cf_template.add_description("Automatically generated with Zappa");self.cf_template.set_description("Automatically generated with Zappa");g' '/opt/hostedtoolcache/pyenv_root/2.0.0/x64/versions/3.7.3/lib/python3.7/site-packages/zappa/core.py'
-
     - name: Update Zappa stage
       run: |
         bash ./scripts/update.sh
