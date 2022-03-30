@@ -26,8 +26,10 @@ I purchase a lot of items from AliExpress and other places that tend to be uniqu
 + [MATE Bike](http://blog-files.davidjameshowell.com/guides-and-manuals/MATE-BIKE-Manual.pdf) (Pedal assisted electric bike) |  [Indiegogo](https://www.indiegogo.com/projects/mate-the-coolest-ebike-ever#/)
 + [BOBOVR D2 Charging Dock for Meta/Oculus Quest 2 and B2 Battery Packs](http://blog-files.davidjameshowell.com/guides-and-manuals/Bobo-R-D2-Charging-Dock-for-Quest-2.pdf) (Oculus Quest 2 charging dock and external battery for extended run time) |  [Amazon](https://www.amazon.com/gp/product/B09MDV2B2J/ref=ppx_yo_dt_b_asin_title_o03_s00?ie=UTF8&psc=1)
 + [Hover-1 Blackhawk](http://blog-files.davidjameshowell.com/guides-and-manuals/Blackhawk-BMZ-BHWK-Manual.pdf) (Electric scooter up to 20mph and 35 mi range) |  [Walmart](https://www.walmart.com/ip/Hover-1-Blackhawk-Electric-Scooter-with-LED-Headlights-15-MPH-Max-Speed-220-lbs-Max-Weight-28-Miles-Max-Distance-Black/151421833)
++ [YATTICH Paint Sprayer](http://blog-files.davidjameshowell.com/guides-and-manuals/YATTICH-Paint-Sprayer.pdf) (Electric paint sprayer) |  [Amazon](https://www.amazon.com/gp/product/B08THKLXKL/ref=ppx_yo_dt_b_asin_title_o08_s00?ie=UTF8&psc=1)
 
 ## Updates
 * 04/18/2020 Initial List Created, to add better product descriptions.
 * 05/06/2021 Added additional manual for misc. devices I have collected in the past year.
 * 02/25/2022 Additional manual scanned in and added
+* 03/30/2022 Add Paint Sprayer Manual
